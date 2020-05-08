@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+  <style>
+    #s1 {
+      background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      /* background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important; */
+    }
+
+    .jumbo {
+      background-image: linear-gradient(to bottom left, #00A4FF, #ba54f5, #e14eca) !important;
+      /* background-color: rgba(33,37,41,0.8); */
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .signinbtn {
+      padding: 0.5rem 2.5rem;
+      color: white;
+      border-color: #4e54c8;
+      border:1px solid white;
+      font-size: 2rem;
+    }
+
+
+    .btn-orange {
+      background-color: #fe696a;
+      color: white;
+      border-color: #fe696a;
+      
+    }
+
+    .btn-orange, .btn-shadow {
+      box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(254, 105, 106, 0.9);
+    }
+    .nav-tabs .nav-link {
+    color: #fe696a;
+}
+a.forgotpaswrd {
+    color: #fe696a;
+    text-decoration: none;
+    background-color: transparent;
+}
+  </style>
+</head>
+
+<body>
+  <section id="s1">
+    <div class="container-fluid pt-5">
+      <!-- <img class="img-fluid" src="/static/img/seva_logo.png" alt="SEVA"> -->
+      <p class="display-1 ml-5" style="letter-spacing: 10px;">Seva</p>
+
+      <div class="flex-container">
+
+        <div class="rounded jumbo pt-5 mt-5 px-4"
+          style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+          <div class="container text-center">
+            <p class="display-4 font-weight-normal">Welcome To SevaApp</p>
+            <div class="container p-3">
+              <p class="lead text-center">This is a modified jumbotron that occupies the entire horizontal space of
+                its parent.</p>
+            </div>
+          </div>
+
+          <!-- buttons -->
+          <div class="container text-center mt-5 mb-3">
+            <button type="button" class="btn signinbtn btn-outline-dark mr-4" data-toggle="modal"
+              data-target="#donor-signin-modal">Donate</button>
+
+            <button type="button" class="btn btn-outline-dark signinbtn ml-4"  data-toggle="modal"
+            data-target="#receiver-signin-modal">Receive</button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- donater -->
+  <div class="modal fade" id="donor-signin-modal" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <ul class="nav nav-tabs card-header-tabs" role="tablist">
+            <li class="nav-item"><a class="nav-link active" href="#signin-tab" data-toggle="tab" role="tab"
+                aria-selected="true"><i class="czi-unlocked mr-2 mt-n1"></i>Sign in</a></li>
+            <li class="nav-item"><a class="nav-link" href="#signup-tab" data-toggle="tab" role="tab"
+                aria-selected="false"><i class="czi-user mr-2 mt-n1"></i>Sign up</a></li>
+          </ul>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body tab-content py-4">
+          <form class="needs-validation tab-pane fade show active" autocomplete="off" novalidate="" id="signin-tab">
+            <div class="form-group">
+              <label for="si-email">Email address</label>
+              <input class="form-control" type="email" id="si-email" placeholder="johndoe@example.com" required="">
+              <div class="invalid-feedback">Please provide a valid email address.</div>
+            </div>
+            <div class="form-group">
+              <label for="si-password">Password</label>
+              <div class="password-toggle">
+                <input class="form-control" type="password" id="si-password" required="">
+                <label class="password-toggle-btn">
+                  <input class="custom-control-input" type="checkbox"><i
+                    class="czi-eye password-toggle-indicator"></i><span class="sr-only">Show password</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group d-flex flex-wrap justify-content-between">
+              <div class="custom-control custom-checkbox mb-2">
+                <input class="custom-control-input" type="checkbox" id="si-remember">
+                <label class="custom-control-label" for="si-remember">Remember me</label>
+              </div><a class="font-size-sm forgotpaswrd" href="#">Forgot password?</a>
+            </div>
+            <button class="btn btn-orange btn-block btn-shadow" type="submit">Sign in</button>
+          </form>
+
+
+          <form class="needs-validation tab-pane fade" autocomplete="off" novalidate="" id="signup-tab">
+            <div class="form-group">
+              <label for="su-name">Full name</label>
+              <input class="form-control" type="text" id="su-name" placeholder="John Doe" required="">
+              <div class="invalid-feedback">Please fill in your name.</div>
+            </div>
+            <div class="form-group">
+              <label for="su-email">Email address</label>
+              <input class="form-control" type="email" id="su-email" placeholder="johndoe@example.com" required="">
+              <div class="invalid-feedback">Please provide a valid email address.</div>
+            </div>
+            <div class="form-group">
+              <label for="su-password">Password</label>
+              <div class="password-toggle">
+                <input class="form-control" type="password" id="su-password" required="">
+                <label class="password-toggle-btn">
+                  <input class="custom-control-input" type="checkbox"><i
+                    class="czi-eye password-toggle-indicator"></i><span class="sr-only">Show password</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="su-password-confirm">Confirm password</label>
+              <div class="password-toggle">
+                <input class="form-control" type="password" id="su-password-confirm" required="">
+                <label class="password-toggle-btn">
+                  <input class="custom-control-input" type="checkbox"><i
+                    class="czi-eye password-toggle-indicator"></i><span class="sr-only">Show password</span>
+                </label>
+              </div>
+            </div>
+            <button class="btn btn-orange btn-block btn-shadow" type="submit">Sign up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- receiver -->
+  <div class="modal fade" id="receiver-signin-modal" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <ul class="nav nav-tabs card-header-tabs" role="tablist">
+            <li class="nav-item"><a class="nav-link active" href="#signin-tab" data-toggle="tab" role="tab"
+                aria-selected="true"><i class="czi-unlocked mr-2 mt-n1"></i>Sign in</a></li>
+            <li class="nav-item"><a class="nav-link" href="#signup-tab" data-toggle="tab" role="tab"
+                aria-selected="false"><i class="czi-user mr-2 mt-n1"></i>Sign up</a></li>
+          </ul>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body tab-content py-4">
+          <form class="needs-validation tab-pane fade show active" autocomplete="off" novalidate="" id="signin-tab">
+            <div class="form-group">
+              <label for="si-email">Email address</label>
+              <input class="form-control" type="email" id="si-email" placeholder="johndoe@example.com" required="">
+              <div class="invalid-feedback">Please provide a valid email address.</div>
+            </div>
+            <div class="form-group">
+              <label for="si-password">Password</label>
+              <div class="password-toggle">
+                <input class="form-control" type="password" id="si-password" required="">
+                <label class="password-toggle-btn">
+                  <input class="custom-control-input" type="checkbox"><i
+                    class="czi-eye password-toggle-indicator"></i><span class="sr-only">Show password</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group d-flex flex-wrap justify-content-between">
+              <div class="custom-control custom-checkbox mb-2">
+                <input class="custom-control-input" type="checkbox" id="si-remember">
+                <label class="custom-control-label" for="si-remember">Remember me</label>
+              </div><a class="font-size-sm forgotpaswrd" href="#">Forgot password?</a>
+            </div>
+            <button class="btn btn-orange btn-block btn-shadow" type="submit">Sign in</button>
+          </form>
+
+
+          <form class="needs-validation tab-pane fade" autocomplete="off" novalidate="" id="signup-tab">
+            <div class="form-group">
+              <label for="su-name">Full name</label>
+              <input class="form-control" type="text" id="su-name" placeholder="John Doe" required="">
+              <div class="invalid-feedback">Please fill in your name.</div>
+            </div>
+            <div class="form-group">
+              <label for="su-email">Email address</label>
+              <input class="form-control" type="email" id="su-email" placeholder="johndoe@example.com" required="">
+              <div class="invalid-feedback">Please provide a valid email address.</div>
+            </div>
+            <div class="form-group">
+              <label for="su-password">Password</label>
+              <div class="password-toggle">
+                <input class="form-control" type="password" id="su-password" required="">
+                <label class="password-toggle-btn">
+                  <input class="custom-control-input" type="checkbox"><i
+                    class="czi-eye password-toggle-indicator"></i><span class="sr-only">Show password</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="su-password-confirm">Confirm password</label>
+              <div class="password-toggle">
+                <input class="form-control" type="password" id="su-password-confirm" required="">
+                <label class="password-toggle-btn">
+                  <input class="custom-control-input" type="checkbox"><i
+                    class="czi-eye password-toggle-indicator"></i><span class="sr-only">Show password</span>
+                </label>
+              </div>
+            </div>
+            <button class="btn btn-orange btn-block btn-shadow" type="submit">Sign up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
